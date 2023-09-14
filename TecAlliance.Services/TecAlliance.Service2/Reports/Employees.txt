@@ -1,0 +1,31 @@
+ID: 2, Name: Olivero Jaquiss, Position: Sales Associate, Hiring Date: 11/14/1993 12:00:00 AM, Salary: 9889
+ID: 3, Name: Thedrick Hadkins, Position: Research Nurse, Hiring Date: 5/25/1996 12:00:00 AM, Salary: 8929
+ID: 4, Name: Abba Abbot, Position: Senior Financial Analyst, Hiring Date: 7/26/1995 12:00:00 AM, Salary: 6350
+ID: 5, Name: Roselia Agnolo, Position: Associate Professor, Hiring Date: 1/13/1990 12:00:00 AM, Salary: 6201
+ID: 6, Name: Susie Kay, Position: Assistant Manager, Hiring Date: 1/5/1999 12:00:00 AM, Salary: 6353
+ID: 7, Name: Merlina Aglione, Position: Professor, Hiring Date: 2/15/2000 12:00:00 AM, Salary: 9509
+ID: 8, Name: Else Westfalen, Position: Chemical Engineer, Hiring Date: 2/2/1996 12:00:00 AM, Salary: 8616
+ID: 9, Name: Reiko Haughian, Position: Senior Cost Accountant, Hiring Date: 1/6/2000 12:00:00 AM, Salary: 9629
+ID: 10, Name: Ronnie Volkes, Position: Nurse, Hiring Date: 8/28/1997 12:00:00 AM, Salary: 6641
+ID: 11, Name: Hobie Mellody, Position: Food Chemist, Hiring Date: 6/4/2000 12:00:00 AM, Salary: 5169
+ID: 12, Name: Kerr Earley, Position: General Manager, Hiring Date: 12/19/1992 12:00:00 AM, Salary: 9591
+ID: 13, Name: Georgeta Sawbridge, Position: Food Chemist, Hiring Date: 2/26/1996 12:00:00 AM, Salary: 8010
+ID: 14, Name: Shannan Kyd, Position: Senior Sales Associate, Hiring Date: 1/12/1999 12:00:00 AM, Salary: 6020
+ID: 15, Name: Cyril Vain, Position: Engineer III, Hiring Date: 5/15/1998 12:00:00 AM, Salary: 8234
+ID: 16, Name: Kirsti Zupa, Position: Research Associate, Hiring Date: 11/9/1994 12:00:00 AM, Salary: 7289
+ID: 17, Name: Emmey McGrowther, Position: Business Systems Development Analyst, Hiring Date: 11/19/1991 12:00:00 AM, Salary: 9467
+ID: 18, Name: Kessiah Schlagtmans, Position: GIS Technical Architect, Hiring Date: 9/2/1995 12:00:00 AM, Salary: 6463
+ID: 19, Name: Jacynth Farey, Position: VP Quality Control, Hiring Date: 1/31/1995 12:00:00 AM, Salary: 5106
+ID: 20, Name: VOVA, Position: NET, Hiring Date: 9/12/2023 4:54:39 PM, Salary: 4000
+ID: 21, Name: Vodka, Position: Dev New, Hiring Date: 9/12/2023 4:50:03 PM, Salary: 3000
+ID: 22, Name: Yoda, Position: NET dev, Hiring Date: 9/12/2023 4:47:24 PM, Salary: 2000
+ID: 23, Name: vueangular, Position: Dev, Hiring Date: 9/12/2023 12:00:00 AM, Salary: 2000
+ID: 24, Name: V, Position: V, Hiring Date: 9/13/2023 5:17:23 PM, Salary: 10
+ID: 25, Name: vueangular, Position: Dev, Hiring Date: 9/9/2023 12:00:00 AM, Salary: 2000
+ID: 26, Name: vueangular, Position: Dev, Hiring Date: 9/17/2023 12:00:00 AM, Salary: 2000
+ID: 27, Name: vueangular, Position: Dev, Hiring Date: 9/3/2023 12:00:00 AM, Salary: 2000
+ID: 28, Name: vueangular, Position: Dev, Hiring Date: 9/8/2023 12:00:00 AM, Salary: 2000
+ID: 29, Name: vueangular, Position: Dev, Hiring Date: 9/8/2023 12:00:00 AM, Salary: 2000
+ID: 30, Name: vueangular, Position: Dev, Hiring Date: 9/15/2023 12:00:00 AM, Salary: 2000
+ID: 31, Name: vueangular, Position: Dev, Hiring Date: 9/15/2023 12:00:00 AM, Salary: 2000
+ID: 32, Name: angularnet, Position: Dev, Hiring Date: 9/17/2023 12:00:00 AM, Salary: 4000

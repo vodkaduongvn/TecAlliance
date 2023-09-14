@@ -1,0 +1,20 @@
+<!-- employee-details.component.html -->
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="card">
+          <div class="card-header">
+            Employee Details
+          </div>
+          <div class="card-body">
+            <p><strong>Name:</strong> {{ employee?.name }}</p>
+            <p><strong>Position:</strong> {{ employee?.position }}</p>
+            <p><strong>Hiring Date:</strong> {{ employee?.hiringDate | date: 'yyyy-MM-dd' }}</p>
+            <p><strong>Salary:</strong> {{ employee?.salary | currency }}</p>
+          </div>
+        </div>
+      <button (click)="goBack()" class="btn btn-secondary">Back</button>
+      </div>
+    </div>
+  </div>
+  
