@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,6 +14,8 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 import { EmployeeCreateComponent } from './employee-create/employee-create.component';
 import { HttpCacheInterceptor } from './http-cache.interceptor';
+import { GlobalErrorHandlerService } from './services/global-error-handler';
+import { ErrorInterceptor } from './error-interceptor';
 
 
 export const MY_DATE_FORMATS = {
@@ -52,6 +54,15 @@ export const MY_DATE_FORMATS = {
     {
       provide: HTTP_INTERCEPTORS,
       useClass: HttpCacheInterceptor,
+      multi: true
+    },
+    {
+      provide: ErrorHandler,
+      useClass: GlobalErrorHandlerService
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorInterceptor,
       multi: true
     }],
   bootstrap: [AppComponent]
