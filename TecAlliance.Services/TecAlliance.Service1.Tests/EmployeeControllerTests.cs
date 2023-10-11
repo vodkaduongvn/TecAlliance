@@ -60,7 +60,7 @@ namespace TecAlliance.Service1.Tests
         }
 
         [TestMethod]
-        public void CreateEmployee_ReturnsCreatedEmployee()
+        public async Task CreateEmployee_ReturnsCreatedEmployee()
         {
             // Arrange
             _employeeRepository.Setup(repo => repo.AddEmployee(It.IsAny<Employee>()))
@@ -70,7 +70,7 @@ namespace TecAlliance.Service1.Tests
                 });
 
             // Act
-            var result = _employeeController.CreateEmployee(_employee) as CreatedAtActionResult;
+            var result = await _employeeController.CreateEmployee(_employee) as CreatedAtActionResult;
 
             // Assert
             Assert.IsNotNull(result);
@@ -82,7 +82,7 @@ namespace TecAlliance.Service1.Tests
         }
 
         [TestMethod]
-        public void UpdateEmployee_ReturnsNoContent()
+        public async void UpdateEmployee_ReturnsNoContent()
         {
             // Arrange
             _employeeRepository.Setup(repo => repo.UpdateEmployee(It.IsAny<Employee>()))
@@ -92,7 +92,7 @@ namespace TecAlliance.Service1.Tests
                 });
 
             // Act
-            var result = _employeeController.UpdateEmployee(_employee) as ObjectResult;
+            var result = await _employeeController.UpdateEmployee(_employee) as ObjectResult;
 
             // Assert
             Assert.IsNotNull(result);
@@ -100,7 +100,7 @@ namespace TecAlliance.Service1.Tests
         }
 
         [TestMethod]
-        public void DeleteEmployee_ReturnsNoContent()
+        public async void DeleteEmployee_ReturnsNoContent()
         {
             // Arrange
             _employeeRepository.Setup(repo => repo.DeleteEmployee(_employeeId))
@@ -110,7 +110,7 @@ namespace TecAlliance.Service1.Tests
                          });
 
             // Act
-            var result = _employeeController.DeleteEmployee(_employeeId) as NoContentResult;
+            var result = await _employeeController.DeleteEmployee(_employeeId) as NoContentResult;
 
             // Assert
             Assert.IsNotNull(result);

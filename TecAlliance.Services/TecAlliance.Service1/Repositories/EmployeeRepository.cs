@@ -8,9 +8,9 @@ namespace TecAlliance.Service1.Repositories
     {
         IEnumerable<Employee> GetAllEmployees();
         Employee GetEmployeeById(int id);
-        void AddEmployee(Employee employee);
-        void UpdateEmployee(Employee employee);
-        void DeleteEmployee(int id);
+        Task AddEmployee(Employee employee);
+        Task UpdateEmployee(Employee employee);
+        Task DeleteEmployee(int id);
     }
 
     public class EmployeeRepository:IEmployeeRepository
@@ -36,14 +36,14 @@ namespace TecAlliance.Service1.Repositories
             return _employees.FirstOrDefault(e => e.Id == id);
         }
 
-        public void AddEmployee(Employee employee)
+        public async Task AddEmployee(Employee employee)
         {
             employee.Id = GenerateNewEmployeeId();
             _employees.Add(employee);
-            SaveData();
+            await SaveData();
         }
 
-        public void UpdateEmployee(Employee employee)
+        public async Task UpdateEmployee(Employee employee)
         {
             var existingEmployee = _employees.FirstOrDefault(e => e.Id == employee.Id);
 
@@ -53,16 +53,16 @@ namespace TecAlliance.Service1.Repositories
             existingEmployee.HiringDate = employee.HiringDate;
             existingEmployee.Salary = employee.Salary;
 
-            SaveData();
+            await SaveData();
         }
 
-        public void DeleteEmployee(int id)
+        public async Task DeleteEmployee(int id)
         {
             var employeeToRemove = _employees.FirstOrDefault(e => e.Id == id);
             if (employeeToRemove != null)
             {
                 _employees.Remove(employeeToRemove);
-                SaveData();
+                await SaveData();
             }
         }
 
@@ -91,11 +91,11 @@ namespace TecAlliance.Service1.Repositories
             return _employees.Count > 0 ? _employees.Max(e => e.Id) + 1 : 1;
         }
 
-        private void SaveData()
+        private async Task SaveData()
         {
             // Serialize the employees list and save it to the JSON file
             string json = JsonConvert.SerializeObject(_employees, Formatting.Indented);
-            File.WriteAllText(_filePath, json);
+            await File.WriteAllTextAsync(_filePath, json);
         }
 
         #endregion

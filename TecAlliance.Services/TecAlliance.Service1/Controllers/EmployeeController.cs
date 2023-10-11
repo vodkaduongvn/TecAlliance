@@ -38,35 +38,35 @@ namespace TecAlliance.Service1.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateEmployee([FromBody] Employee employee)
+        public async Task<IActionResult> CreateEmployee([FromBody] Employee employee)
         {
             if (employee == null)
             {
                 return BadRequest("Invalid employee data.");
             }
 
-            _employeeRepository.AddEmployee(employee);
+            await _employeeRepository.AddEmployee(employee);
             Log.Information($"Created employee with ID {employee.Id}.");
 
             return CreatedAtAction("GetEmployee", new { id = employee.Id }, employee);
         }
 
         [HttpPut()]
-        public IActionResult UpdateEmployee([FromBody] Employee employee)
+        public async Task<IActionResult> UpdateEmployee([FromBody] Employee employee)
         {
             if (employee == null)
             {
                 return BadRequest("Invalid employee data or ID mismatch.");
             }
 
-            _employeeRepository.UpdateEmployee(employee);
+            await _employeeRepository.UpdateEmployee(employee);
             Log.Information($"Updated employee with ID {employee.Id}.");
 
             return Ok(employee);
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteEmployee(int id)
+        public async Task<IActionResult> DeleteEmployee(int id)
         {
             var existingEmployee = _employeeRepository.GetEmployeeById(id);
             if (existingEmployee == null)
@@ -74,7 +74,7 @@ namespace TecAlliance.Service1.Controllers
                 return NotFound();
             }
 
-            _employeeRepository.DeleteEmployee(id);
+            await _employeeRepository.DeleteEmployee(id);
             Log.Information($"Deleted employee with ID {id}.");
 
             return NoContent();
